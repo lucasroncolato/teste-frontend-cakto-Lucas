@@ -23,7 +23,7 @@ jest.mock('@/shared/components/ui/Label', () => ({
   Label: (props: React.LabelHTMLAttributes<HTMLLabelElement>) => <label {...props} />,
 }));
 
-const { ProductForm } = require('./ProductForm');
+const { ProductForm } = (await import("./ProductForm"));
 
 const product = {
   id: 1,
